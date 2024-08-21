@@ -3,9 +3,9 @@ import pytest
 import unittest
 
 @pytest.mark.parametrize('args, expected_tuple', [
-                        (['-n', '20'], (20, 150, 200)),
-                        (['-n', '4', '--max', '170'], (4, 150, 170)), 
-                        (['-n', '12', '--min', '160'], (12, 160, 200))
+                        (['-n', '20'], (20, 10, 20)),
+                        (['-n', '4', '--max', '17'], (4, 10, 17)), 
+                        (['-n', '12', '--min', '12'], (12, 12, 20))
                         ])
 def test_wordgen(args, expected_tuple):
     """
